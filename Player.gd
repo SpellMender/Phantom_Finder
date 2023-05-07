@@ -1,30 +1,27 @@
-extends Area2D
-
+extends KinematicBody2D
 
 export var speed = 400
-var screen_size
+export var start_pos = Vector2(0, 0)
 
+var screen_size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#position = get_parent().player_start_pos
 	set_screen_size(get_viewport_rect().size)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	move_player(get_move_vector(), delta)
+	move_player(get_move_vector())
 
-
-func move_player(velocity, delta):
+func move_player(velocity):
 	if velocity.length() > 0:
-		position += velocity * delta
-		position.x = clamp(position.x, 0, screen_size.x)
-		position.y = clamp(position.y, 0, screen_size.y)
-		
-		#$AnimatedSprite.play()
-		
-	#else:
-		#$AnimatedSprite.stop()
+		move_and_slide(velocity)
+		#move_and_collide(velocity)
+		#position += velocity * delta
+		#position.x = clamp(position.x, 0, screen_size.x)
+		#position.y = clamp(position.y, 0, screen_size.y)
 
 
 func set_screen_size(size):
@@ -67,5 +64,4 @@ func get_move_vector():
 		$AnimatedSprite.play(anim) # call play() only once at the end to prevent frame locking
 	
 	return velocity
-
 

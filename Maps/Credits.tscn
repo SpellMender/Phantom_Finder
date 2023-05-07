@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://Ghost/move_up/PlayerSpoop_up4.png" type="Texture" id=1]
 [ext_resource path="res://Ghost/move_up/PlayerSpoop_up9.png" type="Texture" id=2]
@@ -97,6 +97,8 @@
 [ext_resource path="res://Ghost/move_up/PlayerSpoop_up16.png" type="Texture" id=95]
 [ext_resource path="res://Ghost/move_up/PlayerSpoop_up18.png" type="Texture" id=96]
 [ext_resource path="res://Ghost/move_up/PlayerSpoop_up20.png" type="Texture" id=97]
+[ext_resource path="res://TilesBound.tres" type="TileSet" id=98]
+[ext_resource path="res://Decorations/ouiji.png" type="Texture" id=99]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -127,15 +129,12 @@ animations = [ {
 position = Vector2( 491, 291 )
 z_index = 1
 script = ExtResource( 25 )
-__meta__ = {
-"_edit_group_": true
-}
 start_pos = Vector2( 480, 304 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
-frame = 9
+frame = 3
 speed_scale = 2.0
 playing = true
 
@@ -143,3 +142,76 @@ playing = true
 position = Vector2( 0, 17 )
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 28 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 98 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -327688, 1, 196613, -327687, 1, 196613, -327686, 1, 196613, -327685, 1, 196613, -327684, 1, 196613, -327683, 1, 196613, -327682, 1, 196613, -327681, 1, 196613, -393216, 1, 196613, -393215, 1, 196613, -393214, 1, 196613, -393213, 1, 196613, -393212, 1, 196613, -393211, 1, 196613, -393210, 1, 196613, -393209, 1, 196613, -262152, 1, 196613, -327673, 1, 196613, -327672, 1, 196613, -196616, 1, 196613, -262137, 1, 196613, -262136, 1, 196613, -131080, 1, 196613, -196601, 1, 196613, -196600, 1, 196613, -65544, 1, 196613, -131065, 1, 196613, -131061, 1, 131077, -8, 1, 196613, -65531, 1, 131077, -65529, 1, 196613, -65527, 1, 131077, -65526, 1, 131077, -65525, 1, 131077, -65524, 1, 131077, 65528, 1, 196613, 0, 1, 196612, 1, 1, 196612, 2, 1, 196612, 3, 1, 196612, 4, 1, 131077, 5, 1, 131077, 6, 1, 196612, 7, 1, 196613, 8, 1, 196612, 9, 1, 131077, 10, 1, 131077, 11, 1, 131077, 12, 1, 131077, 13, 1, 131077, 14, 1, 131077, 131064, 1, 196613, 65536, 1, 196612, 65537, 1, 131077, 65538, 1, 131077, 65539, 1, 131077, 65540, 1, 131077, 65541, 1, 131077, 65542, 1, 131077, 65543, 1, 196613, 65544, 1, 131077, 65545, 1, 131077, 65546, 1, 131077, 65547, 1, 131077, 65548, 1, 131077, 65549, 1, 131077, 65550, 1, 131077, 196600, 1, 196613, 131072, 1, 196612, 131073, 1, 131077, 131074, 1, 131077, 131075, 1, 131077, 131076, 1, 131077, 131077, 1, 131077, 131078, 1, 131077, 131079, 1, 196613, 131080, 1, 131077, 131081, 1, 131077, 131082, 1, 131077, 131083, 1, 131077, 131084, 1, 131077, 131085, 1, 131077, 131086, 1, 131077, 262136, 1, 196613, 262137, 1, 196613, 262138, 1, 196613, 262139, 1, 196613, 262140, 1, 196613, 262141, 1, 196613, 262142, 1, 196613, 262143, 1, 196613, 196608, 1, 196613, 196609, 1, 196613, 196610, 1, 196613, 196611, 1, 196613, 196612, 1, 196613, 196613, 1, 196613, 196614, 1, 196613, 196615, 1, 196613, 196616, 1, 131077, 196617, 1, 131077, 196618, 1, 131077, 196619, 1, 131077, 196620, 1, 131077, 196621, 1, 131077, 196622, 1, 131077, 327679, 1, 131077, 262144, 1, 131077, 262145, 1, 131077, 262146, 1, 131077, 262147, 1, 131077, 262148, 1, 131077, 262149, 1, 131077, 262150, 1, 131077, 262151, 1, 131077, 262152, 1, 131077, 262153, 1, 131077, 262154, 1, 131077, 262155, 1, 131077, 262156, 1, 131077, 262157, 1, 131077, 262158, 1, 131077, 393215, 1, 131077, 327680, 1, 131077, 327681, 1, 131077, 327682, 1, 131077, 327683, 1, 131077, 327684, 1, 131077, 327685, 1, 131077, 327686, 1, 131077, 327687, 1, 131077, 327688, 1, 131077, 327689, 1, 131077, 327690, 1, 131077, 327691, 1, 131077, 327692, 1, 131077, 327693, 1, 131077, 327694, 1, 131077, 393216, 1, 131077, 393217, 1, 131077, 393218, 1, 131077, 393219, 1, 131077, 393220, 1, 131077, 393221, 1, 131077, 393222, 1, 131077, 393223, 1, 131077, 393224, 1, 131077, 393225, 1, 131077, 393226, 1, 131077, 393227, 1, 131077, 393228, 1, 131077, 393229, 1, 131077, 393230, 1, 196612, 458752, 1, 131077, 458753, 1, 131077, 458754, 1, 131077, 458755, 1, 131077, 458756, 1, 131077, 458757, 1, 131077, 458758, 1, 131077, 458759, 1, 131077, 458760, 1, 131077, 458761, 1, 131077, 458762, 1, 131077, 458763, 1, 131077, 458764, 1, 131077, 458765, 1, 131077, 458766, 1, 196612, 524289, 1, 131077, 524293, 1, 131077, 524294, 1, 131077, 524295, 1, 131077, 524296, 1, 131077, 524297, 1, 131077, 524298, 1, 131077, 524299, 1, 131077, 524300, 1, 131077, 524302, 1, 131077, 589829, 1, 131077, 589831, 1, 131077, 589832, 1, 131077, 589833, 1, 131077, 589834, 1, 131077, 589835, 1, 131077, 655367, 1, 131077, 655370, 1, 131077 )
+
+[node name="Ouiji" type="Sprite" parent="."]
+position = Vector2( -886, -63 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 99 )
+offset = Vector2( 339.5, 115.5 )
+
+[node name="ColorRect" type="ColorRect" parent="Ouiji"]
+margin_left = 215.0
+margin_top = 32.5
+margin_right = 458.0
+margin_bottom = 94.5
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Ouiji/ColorRect"]
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_right = 0.67
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 77.19
+margin_bottom = 65.0
+text = "You are loved as much as you were in life...
+
+...not much."
+scroll_active = false
+deselect_on_focus_loss_enabled = false
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -1295.0
+margin_top = -869.0
+margin_right = 1397.0
+margin_bottom = 991.0
+color = Color( 0.133333, 0.0235294, 0.180392, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -123.0
+margin_top = -126.0
+margin_right = 120.0
+margin_bottom = -64.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2"]
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_right = 0.67
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 77.19
+margin_bottom = 65.0
+text = "   Ah, the blood fountain. Took a
+     lot of human sacrifices to get
+       good reception for my ouiji.
+         Too bad it's a collect call."
+scroll_active = false
+deselect_on_focus_loss_enabled = false
+__meta__ = {
+"_editor_description_": ""
+}
